@@ -1,7 +1,7 @@
 {
   "name": "@detain/dbrel-data-js",
   "version": "1.0.0",
-  "description": "Node.js backend data provider for database relationship visualization. MySQL-based counterpart to dbrel-data-php, produces identical JSON payload for consumption by dbrel-viz.",
+  "description": "Node.js backend data provider for database relationship visualization. MySQL-based counterpart to @detain/dbrel-data-php, produces identical JSON payload consumed by @detain/dbrel-viz.",
   "keywords": [
     "database",
     "visualization",
@@ -16,7 +16,6 @@
   "author": "Joe Huss <detain@interserver.net>",
   "license": "MIT",
   "main": "src/index.js",
-  "types": "src/index.d.ts",
   "files": [
     "src/",
     "README.md",
@@ -25,27 +24,39 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/detain/dbrel-data-js.git"
+    "url": "git+https://github.com/detain/dbrel-data-js.git"
   },
   "homepage": "https://github.com/detain/dbrel-data-js#readme",
   "bugs": {
     "url": "https://github.com/detain/dbrel-data-js/issues"
   },
-  "dependencies": {
-    "mysql2": "^3.9.0"
+  "peerDependencies": {
+    "mysql2": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "mysql2": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "mysql2": "^3.9.0"
   },
   "jest": {
     "testEnvironment": "node",
-    "testMatch": ["<rootDir>/test/**/*.test.js"]
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js"
+    ]
   },
   "engines": {
     "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

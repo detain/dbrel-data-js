@@ -1,0 +1,12 @@
+test/
+tests/
+examples/
+coverage/
+.github/
+.vscode/
+.idea/
+*.log
+.DS_Store
+.eslintrc*
+.editorconfig
+node_modules/
