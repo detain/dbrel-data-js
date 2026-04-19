@@ -24,8 +24,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "prepublishOnly": "npm test"
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
