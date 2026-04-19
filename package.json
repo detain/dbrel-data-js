@@ -1,0 +1,51 @@
+{
+  "name": "@detain/dbrel-data-js",
+  "version": "1.0.0",
+  "description": "Node.js backend data provider for database relationship visualization. MySQL-based counterpart to dbrel-data-php, produces identical JSON payload for consumption by dbrel-viz.",
+  "keywords": [
+    "database",
+    "visualization",
+    "relationships",
+    "schema",
+    "mysql",
+    "erd",
+    "dataviz",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Joe Huss <detain@interserver.net>",
+  "license": "MIT",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/detain/dbrel-data-js.git"
+  },
+  "homepage": "https://github.com/detain/dbrel-data-js#readme",
+  "bugs": {
+    "url": "https://github.com/detain/dbrel-data-js/issues"
+  },
+  "dependencies": {
+    "mysql2": "^3.9.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": ["<rootDir>/test/**/*.test.js"]
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
